@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="2.203" errors="0" skipped="0" tests="20" name="com.clearqa.test.RunImdbTest">
+<testsuite failures="0" time="2.313" errors="0" skipped="0" tests="24" name="com.clearqa.test.RunImdbTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_79\jre\bin"/>
@@ -63,7 +63,7 @@
   <testcase time="0" classname="Scenario: Get movie by title" name="Given I query movie by \&quot;Finding Nemo\&quot;"/>
   <testcase time="0" classname="Scenario: Get movie by title" name="When I make the rest call"/>
   <testcase time="0" classname="Scenario: Get movie by title" name="Then response should contain:"/>
-  <testcase time="0.016" classname="Scenario: Get movie by title" name="Scenario: Get movie by title"/>
+  <testcase time="0" classname="Scenario: Get movie by title" name="Scenario: Get movie by title"/>
   <testcase time="0" classname="| Finding Nemo | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Comedy\&quot;} |" name="Given I query movie by \&quot;Finding Nemo\&quot;"/>
   <testcase time="0" classname="| Finding Nemo | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Comedy\&quot;} |" name="When I make the rest call"/>
   <testcase time="0" classname="| Finding Nemo | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Comedy\&quot;} |" name="Then response should contain \&quot;{\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Comedy\&quot;}\&quot;"/>
@@ -71,8 +71,8 @@
   <testcase time="0" classname="| Inception | {\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;} |" name="Given I query movie by \&quot;Inception\&quot;"/>
   <testcase time="0" classname="| Inception | {\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;} |" name="When I make the rest call"/>
   <testcase time="0" classname="| Inception | {\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;} |" name="Then response should contain \&quot;{\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;}\&quot;"/>
-  <testcase time="0.015" classname="| Inception | {\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;} |" name="| Inception | {\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;} |"/>
-  <testcase time="0" classname="| WALL\uFFFDE | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Family\&quot;} |" name="Given I query movie by \&quot;WALL\uFFFDE\&quot;"/>
+  <testcase time="0" classname="| Inception | {\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;} |" name="| Inception | {\&quot;Genre\&quot;:\&quot;Action\u002C Mystery\u002C Sci-Fi\&quot;} |"/>
+  <testcase time="0.016" classname="| WALL\uFFFDE | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Family\&quot;} |" name="Given I query movie by \&quot;WALL\uFFFDE\&quot;"/>
   <testcase time="0" classname="| WALL\uFFFDE | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Family\&quot;} |" name="When I make the rest call"/>
   <testcase time="0" classname="| WALL\uFFFDE | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Family\&quot;} |" name="Then response should contain \&quot;{\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Family\&quot;}\&quot;"/>
   <testcase time="0" classname="| WALL\uFFFDE | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Family\&quot;} |" name="| WALL\uFFFDE | {\&quot;Genre\&quot;:\&quot;Animation\u002C Adventure\u002C Family\&quot;} |"/>
@@ -80,4 +80,8 @@
   <testcase time="0" classname="| 8\uFFFD | {\&quot;Genre\&quot;: \&quot;Mystery\u002C Sci-Fi\u002C Thriller\&quot;} |" name="When I make the rest call"/>
   <testcase time="0" classname="| 8\uFFFD | {\&quot;Genre\&quot;: \&quot;Mystery\u002C Sci-Fi\u002C Thriller\&quot;} |" name="Then response should contain \&quot;{\&quot;Genre\&quot;: \&quot;Mystery\u002C Sci-Fi\u002C Thriller\&quot;}\&quot;"/>
   <testcase time="0" classname="| 8\uFFFD | {\&quot;Genre\&quot;: \&quot;Mystery\u002C Sci-Fi\u002C Thriller\&quot;} |" name="| 8\uFFFD | {\&quot;Genre\&quot;: \&quot;Mystery\u002C Sci-Fi\u002C Thriller\&quot;} |"/>
+  <testcase time="0" classname="Scenario: Get movie by year" name="Given I query movie by year \&quot;2015\&quot;"/>
+  <testcase time="0" classname="Scenario: Get movie by year" name="When I make the rest call"/>
+  <testcase time="0" classname="Scenario: Get movie by year" name="Then response should contain:"/>
+  <testcase time="0.013" classname="Scenario: Get movie by year" name="Scenario: Get movie by year"/>
 </testsuite>

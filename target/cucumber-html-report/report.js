@@ -44,21 +44,21 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 223783272,
+  "duration": 223613996,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 125538672,
+  "duration": 159924924,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.response_should_contain_JSON(String)"
 });
 formatter.result({
-  "duration": 12624450,
+  "duration": 16799943,
   "status": "passed"
 });
 formatter.scenario({
@@ -100,14 +100,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 326242,
+  "duration": 322652,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 55030313,
+  "duration": 75178343,
   "status": "passed"
 });
 formatter.match({
@@ -120,7 +120,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 309315,
+  "duration": 335989,
   "status": "passed"
 });
 formatter.scenario({
@@ -162,14 +162,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 308289,
+  "duration": 355994,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 53335495,
+  "duration": 59475109,
   "status": "passed"
 });
 formatter.match({
@@ -182,7 +182,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 332911,
+  "duration": 360611,
   "status": "passed"
 });
 formatter.scenario({
@@ -224,14 +224,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 507831,
+  "duration": 412420,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 66011754,
+  "duration": 50969212,
   "status": "passed"
 });
 formatter.match({
@@ -244,7 +244,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 514499,
+  "duration": 443197,
   "status": "passed"
 });
 formatter.scenario({
@@ -286,14 +286,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 378051,
+  "duration": 528862,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 70902311,
+  "duration": 56293733,
   "status": "passed"
 });
 formatter.match({
@@ -306,7 +306,62 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 354968,
+  "duration": 493468,
+  "status": "passed"
+});
+formatter.scenario({
+  "id": "imdb-rest-api-gets;get-movie-by-year",
+  "description": "",
+  "name": "Get movie by year",
+  "keyword": "Scenario",
+  "line": 31,
+  "type": "scenario"
+});
+formatter.step({
+  "name": "I query movie by year \"2015\"",
+  "keyword": "Given ",
+  "line": 32
+});
+formatter.step({
+  "name": "I make the rest call",
+  "keyword": "When ",
+  "line": 33
+});
+formatter.step({
+  "name": "response should contain:",
+  "keyword": "Then ",
+  "line": 34,
+  "doc_string": {
+    "value": "{\r\n\"Response\":\"False\",\r\n\"Error\":\"Something went wrong\"\r\n}",
+    "line": 35,
+    "content_type": ""
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2015",
+      "offset": 23
+    }
+  ],
+  "location": "ImdbSteps.I_query_movie_by_year(String)"
+});
+formatter.result({
+  "duration": 297517,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.I_make_the_rest_call()"
+});
+formatter.result({
+  "duration": 51597587,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.response_should_contain_JSON(String)"
+});
+formatter.result({
+  "duration": 689418,
   "status": "passed"
 });
 });

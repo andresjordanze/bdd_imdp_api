@@ -27,3 +27,14 @@ Feature: IMDB rest api gets
     | title        | Genre                                       |
     | WALL·E      | {"Genre":"Animation, Adventure, Family"}   |
     | 8½          | {"Genre": "Mystery, Sci-Fi, Thriller"}   |
+
+  Scenario: Get movie by year
+    Given I query movie by year "2015"
+    When I make the rest call
+    Then response should contain:
+      """
+      {
+      "Response":"False",
+      "Error":"Something went wrong"
+      }
+      """

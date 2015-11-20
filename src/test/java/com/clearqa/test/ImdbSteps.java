@@ -25,6 +25,13 @@ public class ImdbSteps {
 		logger.info("http query = " + imdb_url);
 	}
 
+	@Given("^I query movie by year \"(.*)?\"$")
+	public void I_query_movie_by_year(String year) throws UnsupportedEncodingException {
+		imdb_url = "http://www.omdbapi.com/?t=&y="+ URLEncoder.encode(year, "UTF-8") +"&plot=short&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
 	@When("^I make the rest call$")
 	public void I_make_the_rest_call() throws IOException, JSONException {
 		json_response = JsonReader.readJsonFromUrl(imdb_url);
