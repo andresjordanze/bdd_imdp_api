@@ -38,3 +38,15 @@ Feature: IMDB rest api gets
       "Error":"Something went wrong"
       }
       """
+
+  Scenario: Get movie by title and year
+    Given I query movie by 'Star Wars' and year '2011'
+    When I make the rest call
+    Then response should contain:
+      """
+      {
+      "Title":"Star Wars: The Old Republic",
+      "Year":"2011",
+      "Genre":"Action, Adventure, Fantasy"
+      }
+      """

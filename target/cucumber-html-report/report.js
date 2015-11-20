@@ -44,21 +44,21 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 223613996,
+  "duration": 229117540,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 159924924,
+  "duration": 136633476,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.response_should_contain_JSON(String)"
 });
 formatter.result({
-  "duration": 16799943,
+  "duration": 17201076,
   "status": "passed"
 });
 formatter.scenario({
@@ -100,14 +100,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 322652,
+  "duration": 346761,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 75178343,
+  "duration": 64342070,
   "status": "passed"
 });
 formatter.match({
@@ -120,7 +120,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 335989,
+  "duration": 365741,
   "status": "passed"
 });
 formatter.scenario({
@@ -162,14 +162,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 355994,
+  "duration": 334450,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 59475109,
+  "duration": 51584763,
   "status": "passed"
 });
 formatter.match({
@@ -182,7 +182,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 360611,
+  "duration": 364714,
   "status": "passed"
 });
 formatter.scenario({
@@ -224,14 +224,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 412420,
+  "duration": 417036,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 50969212,
+  "duration": 50075123,
   "status": "passed"
 });
 formatter.match({
@@ -244,7 +244,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 443197,
+  "duration": 558613,
   "status": "passed"
 });
 formatter.scenario({
@@ -286,14 +286,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 528862,
+  "duration": 512447,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 56293733,
+  "duration": 53287276,
   "status": "passed"
 });
 formatter.match({
@@ -306,7 +306,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 493468,
+  "duration": 515012,
   "status": "passed"
 });
 formatter.scenario({
@@ -347,21 +347,80 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_year(String)"
 });
 formatter.result({
-  "duration": 297517,
+  "duration": 377025,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 51597587,
+  "duration": 48669613,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.response_should_contain_JSON(String)"
 });
 formatter.result({
-  "duration": 689418,
+  "duration": 298029,
+  "status": "passed"
+});
+formatter.scenario({
+  "id": "imdb-rest-api-gets;get-movie-by-title-and-year",
+  "description": "",
+  "name": "Get movie by title and year",
+  "keyword": "Scenario",
+  "line": 42,
+  "type": "scenario"
+});
+formatter.step({
+  "name": "I query movie by \u0027Star Wars\u0027 and year \u00272011\u0027",
+  "keyword": "Given ",
+  "line": 43
+});
+formatter.step({
+  "name": "I make the rest call",
+  "keyword": "When ",
+  "line": 44
+});
+formatter.step({
+  "name": "response should contain:",
+  "keyword": "Then ",
+  "line": 45,
+  "doc_string": {
+    "value": "{\r\n\"Title\":\"Star Wars: The Old Republic\",\r\n\"Year\":\"2011\",\r\n\"Genre\":\"Action, Adventure, Fantasy\"\r\n}",
+    "line": 46,
+    "content_type": ""
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Star Wars",
+      "offset": 18
+    },
+    {
+      "val": "2011",
+      "offset": 39
+    }
+  ],
+  "location": "ImdbSteps.I_query_movie_by_title_and_year(String,String)"
+});
+formatter.result({
+  "duration": 405238,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.I_make_the_rest_call()"
+});
+formatter.result({
+  "duration": 63271523,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.response_should_contain_JSON(String)"
+});
+formatter.result({
+  "duration": 626836,
   "status": "passed"
 });
 });
