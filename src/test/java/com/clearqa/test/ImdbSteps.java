@@ -39,6 +39,13 @@ public class ImdbSteps {
     logger.info("http query = " + imdb_url);
   }
 
+  @Given("^I query movie by '(.+)' and '(.+)'")
+  public void I_query_movie_by_title_and_plot(String key1, String key2) throws UnsupportedEncodingException {
+    imdb_url = "http://www.omdbapi.com/?t=" + URLEncoder.encode(key1, "UTF-8") + "&y=&plot=" + URLEncoder.encode(key2, "UTF-8") + "&r=json";
+    System.out.println("++++++++"+imdb_url+"++++++++");
+    logger.info("http query = " + imdb_url);
+  }
+
 	@When("^I make the rest call$")
 	public void I_make_the_rest_call() throws IOException, JSONException {
 		json_response = JsonReader.readJsonFromUrl(imdb_url);

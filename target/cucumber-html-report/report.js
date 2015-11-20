@@ -44,21 +44,21 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 229117540,
+  "duration": 213142437,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 136633476,
+  "duration": 222335700,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.response_should_contain_JSON(String)"
 });
 formatter.result({
-  "duration": 17201076,
+  "duration": 14730150,
   "status": "passed"
 });
 formatter.scenario({
@@ -100,14 +100,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 346761,
+  "duration": 613500,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 64342070,
+  "duration": 54567111,
   "status": "passed"
 });
 formatter.match({
@@ -120,7 +120,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 365741,
+  "duration": 326755,
   "status": "passed"
 });
 formatter.scenario({
@@ -162,14 +162,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 334450,
+  "duration": 506291,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 51584763,
+  "duration": 77173756,
   "status": "passed"
 });
 formatter.match({
@@ -182,7 +182,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 364714,
+  "duration": 713014,
   "status": "passed"
 });
 formatter.scenario({
@@ -224,14 +224,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 417036,
+  "duration": 512960,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 50075123,
+  "duration": 56004937,
   "status": "passed"
 });
 formatter.match({
@@ -244,7 +244,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 558613,
+  "duration": 375486,
   "status": "passed"
 });
 formatter.scenario({
@@ -286,14 +286,14 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title(String)"
 });
 formatter.result({
-  "duration": 512447,
+  "duration": 373435,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 53287276,
+  "duration": 54551721,
   "status": "passed"
 });
 formatter.match({
@@ -306,7 +306,7 @@ formatter.match({
   "location": "ImdbSteps.response_should_contain(String)"
 });
 formatter.result({
-  "duration": 515012,
+  "duration": 352404,
   "status": "passed"
 });
 formatter.scenario({
@@ -347,21 +347,21 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_year(String)"
 });
 formatter.result({
-  "duration": 377025,
+  "duration": 291874,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 48669613,
+  "duration": 52607605,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.response_should_contain_JSON(String)"
 });
 formatter.result({
-  "duration": 298029,
+  "duration": 586826,
   "status": "passed"
 });
 formatter.scenario({
@@ -406,21 +406,139 @@ formatter.match({
   "location": "ImdbSteps.I_query_movie_by_title_and_year(String,String)"
 });
 formatter.result({
-  "duration": 405238,
+  "duration": 424218,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.I_make_the_rest_call()"
 });
 formatter.result({
-  "duration": 63271523,
+  "duration": 58557424,
   "status": "passed"
 });
 formatter.match({
   "location": "ImdbSteps.response_should_contain_JSON(String)"
 });
 formatter.result({
-  "duration": 626836,
+  "duration": 622220,
+  "status": "passed"
+});
+formatter.scenario({
+  "id": "imdb-rest-api-gets;get-movie-by-title-and-plot-short",
+  "description": "",
+  "name": "Get movie by title and plot short",
+  "keyword": "Scenario",
+  "line": 54,
+  "type": "scenario"
+});
+formatter.step({
+  "name": "I query movie by \u0027Madagascar\u0027 and \u0027short\u0027",
+  "keyword": "Given ",
+  "line": 55
+});
+formatter.step({
+  "name": "I make the rest call",
+  "keyword": "When ",
+  "line": 56
+});
+formatter.step({
+  "name": "response should contain:",
+  "keyword": "Then ",
+  "line": 57,
+  "doc_string": {
+    "value": "{\r\n\"Title\":\"Madagascar\",\r\n\"Year\":\"2005\",\r\n\"Genre\":\"Animation, Adventure, Comedy\",\r\n\"Plot\":\"Spoiled by their upbringing with no idea what wild life is really like, four animals from New York Central Zoo escape, unwittingly assisted by four absconding penguins, and find themselves in Madagascar, among a bunch of merry lemurs\"\r\n}",
+    "line": 58,
+    "content_type": ""
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Madagascar",
+      "offset": 18
+    },
+    {
+      "val": "short",
+      "offset": 35
+    }
+  ],
+  "location": "ImdbSteps.I_query_movie_by_title_and_plot(String,String)"
+});
+formatter.result({
+  "duration": 402161,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.I_make_the_rest_call()"
+});
+formatter.result({
+  "duration": 50722478,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.response_should_contain_JSON(String)"
+});
+formatter.result({
+  "duration": 603754,
+  "status": "passed"
+});
+formatter.scenario({
+  "id": "imdb-rest-api-gets;get-movie-by-title-and-plot-full",
+  "description": "",
+  "name": "Get movie by title and plot full",
+  "keyword": "Scenario",
+  "line": 67,
+  "type": "scenario"
+});
+formatter.step({
+  "name": "I query movie by \u0027Madagascar\u0027 and \u0027full\u0027",
+  "keyword": "Given ",
+  "line": 68
+});
+formatter.step({
+  "name": "I make the rest call",
+  "keyword": "When ",
+  "line": 69
+});
+formatter.step({
+  "name": "response should contain:",
+  "keyword": "Then ",
+  "line": 70,
+  "doc_string": {
+    "value": "{\r\n\"Title\":\"Madagascar\",\r\n\"Year\":\"2005\",\r\n\"Genre\":\"Animation, Adventure, Comedy\",\r\n\"Plot\":\"At New York\u0027s Central Park Zoo, a lion, a zebra, a giraffe, and a hippo are best friends and stars of the show. But when one of the animals goes missing from their cage, the other three break free to look for him, only to find themselves reunited ... on a ship en route to Africa. When their vessel is hijacked, however, the friends, who have all been raised in captivity, learn first-hand what life can be like in the wild.\"\r\n}",
+    "line": 71,
+    "content_type": ""
+  }
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Madagascar",
+      "offset": 18
+    },
+    {
+      "val": "full",
+      "offset": 35
+    }
+  ],
+  "location": "ImdbSteps.I_query_movie_by_title_and_plot(String,String)"
+});
+formatter.result({
+  "duration": 394466,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.I_make_the_rest_call()"
+});
+formatter.result({
+  "duration": 54640464,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ImdbSteps.response_should_contain_JSON(String)"
+});
+formatter.result({
+  "duration": 947949,
   "status": "passed"
 });
 });
