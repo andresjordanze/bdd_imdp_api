@@ -89,6 +89,18 @@ Feature: IMDB rest api gets
       }
       """
 
+  Scenario: Get series episode by ID as JSON
+    Given a query with series id "tt4185454" and type "episode"
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Title": "Binding Arbitration",
+      "Year": "2015",
+      "Plot": "Erlich demands to be put on stand as Pied Piper and Hooli enter Arbitration. Richard faces a moral dilemma now that he realizes that Hooli's claim may have successful potential. Meanwhile ...",
+      }
+      """
+
   Scenario: Get series by ID as JSON with full plot
     Given a query with series id "tt2575988" and "full"
     When I make the rest call

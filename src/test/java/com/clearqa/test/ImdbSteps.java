@@ -102,6 +102,13 @@ public class ImdbSteps {
 		logger.info("http query = " + imdb_url);
 	}
 
+	@Given("^a query with series id \"([^\"]*)\" and type \"([^\"]*)\"$")
+	public void a_query_with_series_id_and_type(String id, String type) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?i=" + URLEncoder.encode(id, "UTF-8") + "&type=" + URLEncoder.encode(type, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
 	@When("^I make the rest call$")
 	public void I_make_the_rest_call() throws IOException, JSONException {
 		json_response = JsonReader.readJsonFromUrl(imdb_url);
