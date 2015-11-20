@@ -60,6 +60,48 @@ public class ImdbSteps {
 		logger.info("http query = " + imdb_url);
 	}
 
+	@Given("^a query with series id \"([^\"]*)\"$")
+	public void a_query_with_series_id(String id) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?i=" + URLEncoder.encode(id, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
+	@Given("^a query with series id \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void a_query_with_series_id_and(String id, String plotSize) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?i=" + URLEncoder.encode(id, "UTF-8") + "&plot=" + URLEncoder.encode(plotSize, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
+	@Given("^a query with wrong id \"([^\"]*)\"$")
+	public void a_query_with_wrong_id(String id) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?i=" + URLEncoder.encode(id, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
+	@Given("^a query with title \"([^\"]*)\"$")
+	public void a_query_with_title(String param) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?s=" + URLEncoder.encode(param, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
+	@Given("^a query with title \"([^\"]*)\" and type \"([^\"]*)\"$")
+	public void a_query_with_title_and_type(String param, String type) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?s=" + URLEncoder.encode(param, "UTF-8") + "&type=" + URLEncoder.encode(type, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
+	@Given("^a query with title \"([^\"]*)\" and type \"([^\"]*)\" and year \"([^\"]*)\"$")
+	public void a_query_with_title_and_type_and_year(String param, String type, String year) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?s=" + URLEncoder.encode(param, "UTF-8") + "&type=" + URLEncoder.encode(type, "UTF-8") + "&y="+ URLEncoder.encode(year, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
 	@When("^I make the rest call$")
 	public void I_make_the_rest_call() throws IOException, JSONException {
 		json_response = JsonReader.readJsonFromUrl(imdb_url);

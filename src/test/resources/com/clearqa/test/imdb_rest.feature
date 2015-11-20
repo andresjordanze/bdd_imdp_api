@@ -78,7 +78,7 @@ Feature: IMDB rest api gets
       """
 
   Scenario: Get series by ID as JSON
-    Given a query with movie id "tt2575988"
+    Given a query with series id "tt2575988"
     When I make the rest call
     Then the response should contain:
       """
@@ -90,7 +90,7 @@ Feature: IMDB rest api gets
       """
 
   Scenario: Get series by ID as JSON with full plot
-    Given a query with movie id "tt2575988" and "full"
+    Given a query with series id "tt2575988" and "full"
     When I make the rest call
     Then the response should contain:
       """
@@ -102,7 +102,7 @@ Feature: IMDB rest api gets
       """
 
   Scenario: Get series by ID as JSON with short plot
-    Given a query with movie id "tt2575988" and "short"
+    Given a query with series id "tt2575988" and "short"
     When I make the rest call
     Then the response should contain:
       """
@@ -110,6 +110,17 @@ Feature: IMDB rest api gets
       "Title":"Silicon Valley",
       "Genre":"Comedy",
       "Plot":"In the high-tech gold rush of modern Silicon Valley, the people most qualified to succeed are the least capable of handling success. A comedy partially inspired by Mike Judge's own ..."
+      }
+      """
+
+  Scenario: Get wrong message
+    Given a query with wrong id "somethingwrong"
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Response": "False",
+      "Error": "Incorrect IMDb ID"
       }
       """
 
@@ -160,3 +171,188 @@ Feature: IMDB rest api gets
       "Plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
       }
       """
+
+  Scenario: Get array of results
+    Given a query with title "shawshank"
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Search": [
+      {
+      "Title": "The Shawshank Redemption",
+      "Year": "1994",
+      "imdbID": "tt0111161",
+      "Type": "movie",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg"
+      },
+      {
+      "Title": "The Shawshank Redemption",
+      "Year": "1994",
+      "imdbID": "tt0111161",
+      "Type": "movie",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg"
+      },
+      {
+      "Title": "Shawshank: The Redeeming Feature",
+      "Year": "2001",
+      "imdbID": "tt0293927",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Hope Springs Eternal: A Look Back at 'The Shawshank Redemption'",
+      "Year": "2004",
+      "imdbID": "tt0443041",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "The Shawshank Reflection",
+      "Year": "2015",
+      "imdbID": "tt3882670",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "The Shawshank Redemption (Scene)",
+      "Year": "2012",
+      "imdbID": "tt2477746",
+      "Type": "movie",
+      "Poster": "N/A"
+      }
+      ]
+      }
+      """
+
+  Scenario: Get movie not found response
+    Given a query with title "aksjdhasljdask"
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Response": "False",
+      "Error": "Movie not found!"
+      }
+      """
+
+  Scenario: Get array of movies
+    Given a query with title "silicon" and type "movie"
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Search": [
+      {
+      "Title": "Pirates of Silicon Valley",
+      "Year": "1999",
+      "imdbID": "tt0168122",
+      "Type": "movie",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTU1NTE3MjAwNF5BMl5BanBnXkFtZTcwNjEyOTkyMQ@@._V1_SX300.jpg"
+      },
+      {
+      "Title": "Crying... Silicon Tears",
+      "Year": "2001",
+      "imdbID": "tt0298954",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Silicon Towers",
+      "Year": "1999",
+      "imdbID": "tt0186547",
+      "Type": "movie",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTI4NTE0MDY2NF5BMl5BanBnXkFtZTcwODcyNDAzMQ@@._V1_SX300.jpg"
+      },
+      {
+      "Title": "Bill Maher: CrazyStupidPolitics - Live from Silicon Valley",
+      "Year": "2012",
+      "imdbID": "tt2266679",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Doctor Silicon",
+      "Year": "2008",
+      "imdbID": "tt1672618",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Silicon Valley Timelapse",
+      "Year": "2008",
+      "imdbID": "tt1254346",
+      "Type": "movie",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMyNjgwMTcyMl5BMl5BanBnXkFtZTcwNjAxODc3MQ@@._V1_SX300.jpg"
+      },
+      {
+      "Title": "Secrets of Silicon Valley",
+      "Year": "2001",
+      "imdbID": "tt0282948",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Silicon Valley",
+      "Year": "2005",
+      "imdbID": "tt0403503",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Silicon Follies",
+      "Year": "2001",
+      "imdbID": "tt0310152",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Silicon Sensorium",
+      "Year": "2005",
+      "imdbID": "tt0499253",
+      "Type": "movie",
+      "Poster": "N/A"
+      }
+      ]
+      }
+      """
+
+  Scenario: Get array of movies
+    Given a query with title "silicon" and type "movie" and year "1999"
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Search": [
+      {
+      "Title": "Pirates of Silicon Valley",
+      "Year": "1999",
+      "imdbID": "tt0168122",
+      "Type": "movie",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTU1NTE3MjAwNF5BMl5BanBnXkFtZTcwNjEyOTkyMQ@@._V1_SX300.jpg"
+      },
+      {
+      "Title": "Silicon Towers",
+      "Year": "1999",
+      "imdbID": "tt0186547",
+      "Type": "movie",
+      "Poster": "http://ia.media-imdb.com/images/M/MV5BMTI4NTE0MDY2NF5BMl5BanBnXkFtZTcwODcyNDAzMQ@@._V1_SX300.jpg"
+      },
+      {
+      "Title": "Silicon Valley",
+      "Year": "1999",
+      "imdbID": "tt2892336",
+      "Type": "movie",
+      "Poster": "N/A"
+      },
+      {
+      "Title": "Spirit of Silicon Valley",
+      "Year": "1999",
+      "imdbID": "tt0498934",
+      "Type": "movie",
+      "Poster": "N/A"
+      }
+      ]
+      }
+      """
+
