@@ -1,4 +1,4 @@
-# bdd_imdp_api
+# BDD IMDB Api
 Ingenieria de Calidad
 Universidad Catolica Boliviana San Pablo
 
