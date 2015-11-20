@@ -46,6 +46,20 @@ public class ImdbSteps {
     logger.info("http query = " + imdb_url);
   }
 
+	@Given("^a query with movie id \"([^\"]*)\"$")
+	public void a_query_with_movie_id(String id) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?i=" + URLEncoder.encode(id, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
+	@Given("^a query with movie id \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void a_query_with_movie_id_and(String id, String plotSize) throws Throwable {
+		imdb_url = "http://www.omdbapi.com/?i=" + URLEncoder.encode(id, "UTF-8") + "&plot=" + URLEncoder.encode(plotSize, "UTF-8") + "&r=json";
+		System.out.println("++++++++"+imdb_url+"++++++++");
+		logger.info("http query = " + imdb_url);
+	}
+
 	@When("^I make the rest call$")
 	public void I_make_the_rest_call() throws IOException, JSONException {
 		json_response = JsonReader.readJsonFromUrl(imdb_url);
@@ -58,9 +72,16 @@ public class ImdbSteps {
 		JSONObject expected_json = new JSONObject(expected_json_str);
 		JSONAssert.assertEquals(expected_json, json_response, JSONCompareMode.LENIENT);
 	}
-	
+
 	@Then("^response should contain \"(.+)\"")
 	public void response_should_contain(String expecgted_json_str) throws JSONException {
 		response_should_contain_JSON(expecgted_json_str);
 	}
+
+	@Then("^the response should contain:$")
+	public void the_response_should_contain(String expected_json_str) throws Throwable {
+		JSONObject expected_json = new JSONObject(expected_json_str);
+		JSONAssert.assertEquals(expected_json, json_response, JSONCompareMode.LENIENT);
+	}
+
 }
