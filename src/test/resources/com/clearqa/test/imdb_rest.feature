@@ -113,6 +113,37 @@ Feature: IMDB rest api gets
       }
       """
 
+  Scenario: Get movie by ID with tomatoes data
+    Given a query with movie id "tt0068646" and tomatoes "true"
+    When I make the rest call
+    Then the response should contain:
+    """
+    {
+    "Title": "The Godfather",
+    "Year": "1972",
+    "Rated": "R",
+    "Released": "24 Mar 1972",
+    "Runtime": "175 min",
+    "Metascore": "100",
+    "imdbRating": "9.2",
+    "imdbVotes": "1,061,364",
+    "imdbID": "tt0068646",
+    "tomatoMeter": "99",
+    "tomatoImage": "certified",
+    "tomatoRating": "9.2",
+    "tomatoReviews": "84",
+    "tomatoFresh": "83",
+    "tomatoRotten": "1",
+    "tomatoConsensus": "One of Hollywood's greatest critical and commercial successes, The Godfather gets everything right; not only did the movie transcend expectations, it established new benchmarks for American cinema.",
+    "tomatoUserMeter": "98",
+    "tomatoUserRating": "4.4",
+    "tomatoUserReviews": "725999",
+    "DVD": "09 Oct 2001",
+    "Production": "Paramount Pictures",
+    "Response": "True"
+    }
+    """
+
   Scenario: Get series by ID as JSON with short plot
     Given a query with series id "tt2575988" and "short"
     When I make the rest call
@@ -183,6 +214,7 @@ Feature: IMDB rest api gets
       "Plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
       }
       """
+# search using the 's' parameter
 
   Scenario: Get array of results
     Given a query with title "shawshank"
