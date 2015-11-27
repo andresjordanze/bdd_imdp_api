@@ -46,6 +46,13 @@ public class ImdbSteps {
     logger.info("http query = " + imdb_url);
   }
 
+  @Given("^I query movie by '(.+)' and type '(.+)'")
+	public void I_query_movie_by_Star_Wars_and_type_movie(String key1, String key2) throws Throwable {
+    imdb_url = "http://www.omdbapi.com/?t=" + URLEncoder.encode(key1, "UTF-8") + "&type="+ URLEncoder.encode(key2, "UTF-8") +"&y=&plot=" + URLEncoder.encode(key2, "UTF-8") + "&r=json";
+    System.out.println("++++++++"+imdb_url+"++++++++");
+    logger.info("http query = " + imdb_url);
+	}
+
 	@Given("^a query with movie id \"([^\"]*)\"$")
 	public void a_query_with_movie_id(String id) throws Throwable {
 		imdb_url = "http://www.omdbapi.com/?i=" + URLEncoder.encode(id, "UTF-8") + "&r=json";

@@ -51,6 +51,31 @@ Feature: IMDB rest api gets
       }
       """
 
+  Scenario: Get movie by title and type
+    Given I query movie by 'Star Wars' and type 'movie'
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Title":"Star Wars: Episode IV - A New Hope",
+      "Year":"1977",
+      "Genre":"Action, Adventure, Fantasy",
+      "Type":"movie"
+      }
+      """
+
+  Scenario: Get movie by title and tomatoes
+    Given I query movie by 'Star Wars' and tomatoes 'true'
+    When I make the rest call
+    Then the response should contain:
+      """
+      {
+      "Title":"Star Wars: Episode IV - A New Hope",
+      "Year":"1983",
+      "Genre":"Action, Adventure, Sci-Fi",
+      }
+      """
+
   Scenario: Get movie by title and plot short
     Given I query movie by 'Madagascar' and 'short'
     When I make the rest call
